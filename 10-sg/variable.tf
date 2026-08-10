@@ -21,7 +21,7 @@ variable "sg_names" {
     # "backend_alb",
     ## vpn
     "open_vpn",
-     "eks_control_plane",
-     "eks_node"
+    "eks_control_plane",
+    "eks_node"
   ]
 }
