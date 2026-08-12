@@ -1,5 +1,4 @@
 #!/bin/bash
-
 ## ebs volume
 sudo growpart /dev/nvme0n1 4
 sudo lvextend -L +30G /dev/mapper/RootVG-homeVol
@@ -11,13 +10,13 @@ sudo dnf config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashi
 sudo dnf install terraform -y
 
 ## configure data base
-cd /home/ec2-user
-git clone https://github.com/daws-88/roboshop-dev-infra.git
-chown -R ec2-user:ec2-user roboshop-devlopment-infra
-cd roboshop-devlopment-infra
-cd 40-databases
-terraform init
-terraform apply -auto-approve
+# cd /home/ec2-user
+# git clone https://github.com/daws-88/roboshop-dev-infra.git
+# chown -R ec2-user:ec2-user roboshop-dev-infra
+# cd roboshop-devlopment-infra
+# cd 40-databases
+# terraform init
+# terraform apply -auto-approve
 
 ## install docker
 dnf -y install dnf-plugins-core
